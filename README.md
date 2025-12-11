@@ -35,7 +35,6 @@ gcloud config set functions/region us-central1
 
 ### Deploy da função
 ```bash
-cd gcp-function
 npm run deploy
 ```
 

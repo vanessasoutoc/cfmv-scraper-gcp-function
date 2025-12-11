@@ -1,0 +1,23 @@
+{
+  "name": "crmv-scraper-gcp",
+  "version": "1.0.0",
+  "description": "CRMV scraper as Google Cloud Function",
+  "main": "index.js",
+
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
+    "axios": "^1.6.2",
+    "firebase": "^12.6.0",
+    "puppeteer": "^22.6.5"
+  },
+  "scripts": {
+    "start": "functions-framework --target=searchCRMV --port=8080",
+    "deploy": "gcloud functions deploy searchCRMV --runtime nodejs20 --trigger-http --region=us-central1 --service-account gcpServiceAccount",
+    "gcp-build": "node node_modules/puppeteer/install.mjs",
+    "docker:build": "docker build -t crmv-function .",
+    "docker:run": "docker run -p 8080:8080 crmv-function"
+  },
+  "engines": {
+    "node": "20"
+  }
+}

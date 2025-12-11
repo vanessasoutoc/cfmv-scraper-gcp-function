@@ -77,15 +77,32 @@ GET https://REGION-PROJECT_ID.cloudfunctions.net/searchCRMV?crmvNumber=02655&sta
 ### Resposta
 ```json
 {
-  "type": "success",
-  "data": [
-    {
-      "nome": "CLAUDIO BARRETO",
-      "pf_inscricao": "02655",
-      "pf_uf": "MG",
-      "atuante": true
-    }
-  ]
+    "type": "sucess",
+    "data": [
+        {
+            "id_pf_inscricao": 259054,
+            "pf_inscricao": "02655",
+            "pf_classe": "VP",
+            "pf_uf": "MG",
+            "nome": "CLAUDIO BARRETO",
+            "nome_social": null,
+            "atuante": true,
+            "dt_inscricao": "1984-12-08T00:00:00+00:00",
+            "cpf": "00000000000"
+        },
+        {
+            "id_pf_inscricao": 274174,
+            "pf_inscricao": "02655",
+            "pf_classe": "ZP",
+            "pf_uf": "MG",
+            "nome": "RAFAELA KELLY SOUZA DOS SANTOS",
+            "nome_social": null,
+            "atuante": true,
+            "dt_inscricao": "2022-06-20T00:00:00+00:00",
+            "cpf": "00000000000"
+        }
+    ],
+    "haveMoreThanLimitConsultaRegisters": false
 }
 ```
 
